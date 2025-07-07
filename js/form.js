@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const contactForm = document.getElementById("contact-form");
 
-	const inputs = ["name", "email", "message"].map((id) =>
+	const inputs = ["name", "email", "subject", "message"].map((id) =>
 		document.getElementById(id)
 	);
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 3000);
 	}
 
-	contactForm.addEventListener("submit",  (e) => {
+	contactForm.addEventListener("submit", async (e) => {
 		e.preventDefault();
 
 		let hasError = false;
@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		const email = document.getElementById("email");
-
 		const emailRegex =
 			/^(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"[^"\\]*(\\.[^"\\]*)*")@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/i;
 
@@ -68,14 +67,28 @@ document.addEventListener("DOMContentLoaded", () => {
 		submitButton.innerHTML =
 			'<i class="ri-loader-4-line animate-spin mr-2"></i> Sending...';
 
-		setTimeout(() => {
-			showToast(
-				"Thank you for your message! I’ll get back to you soon.",
-				"success"
-			);
-			contactForm.reset();
+		try {
+			const formData = new FormData(contactForm);
+
+			const response = await fetch("https://formspree.io/f/mzzgqlpr", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+				},
+				body: formData,
+			});
+
+			if (response.ok) {
+				showToast("Thank you for your message! I’ll get back to you soon.", "success");
+				contactForm.reset();
+			} else {
+				showToast("Failed to send. Please try again later.", "error");
+			}
+		} catch (error) {
+			showToast("Something went wrong. Please try again later.", "error");
+		} finally {
 			submitButton.disabled = false;
 			submitButton.innerHTML = originalText;
-		}, 1500);
+		}
 	});
 });
