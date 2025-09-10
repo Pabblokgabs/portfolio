@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		"Node.js Developer",
 		"Problem Solver",
 		"UI/UX Enthusiast",
+		"Mobile Developer",
+		"Python Developer",
 	];
 
 	let phraseIndex = 0;
