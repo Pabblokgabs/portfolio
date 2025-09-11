@@ -139,8 +139,11 @@
 		>
 			<div class="absolute inset-0 bg-white bg-opacity-85"></div>
 			<div class="container mx-auto px-6 relative z-10">
-				<div class="flex flex-col md:flex-row items-center md:h-[500px]">
-					<div class="w-full md:w-1/2 mb-12 md:mb-0">
+				<div class="flex flex-col md:flex-row items-center d:h-[500px]">
+					<div
+						id="leftDiv"
+						class="w-full md:w-1/2 mb-12 md:mb-0 fade-in-left opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
+					>
 						<h1
 							class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
 						>
@@ -171,7 +174,10 @@
 							>
 						</div>
 					</div>
-					<div class="w-full md:w-1/2 flex justify-center">
+					<div
+						id="rightDiv"
+						class="w-full md:w-1/2 flex justify-center fade-in-right opacity-0 translate-x-[100px] transition-all duration-1000 ease-out"
+					>
 						<img
 							src="./img/hero.png"
 							alt="Developer Illustration"
@@ -185,7 +191,9 @@
 		<!-- Projects Section -->
 		<section id="projects" class="py-16 md:py-24 bg-gray-50">
 			<div class="container mx-auto px-6 section-fade">
-				<div class="text-center mb-16">
+				<div
+					class="text-center mb-16 opacity-0 translate-y-[-100px] transition-all duration-700 fade-in-down"
+				>
 					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 						Featured Projects
 					</h2>
@@ -196,7 +204,9 @@
 				</div>
 
 				<!-- Filter Buttons -->
-				<div class="flex flex-wrap justify-center gap-3 mb-12">
+				<div
+					class="flex flex-wrap justify-center gap-3 mb-12 opacity-0 translate-y-[100px] transition-all duration-700 fade-in-up"
+				>
 					<button
 						id="filter-btn"
 						class="active px-4 py-2 !rounded-button whitespace-nowrap bg-primary text-white font-medium transition-all duration-300"
@@ -237,7 +247,7 @@
 				<!-- Projects Grid -->
 				<div
 					id="renderProjects"
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-0 translate-y-[100px] transition-all duration-700 fade-in-up"
 				></div>
 			</div>
 		</section>
@@ -248,7 +258,9 @@
 			class="py-16 md:py-24 bg-gray-900 transition-colors duration-300"
 		>
 			<div class="container mx-auto px-6 section-fade">
-				<div class="text-center mb-16">
+				<div
+					class="text-center mb-16 opacity-0 translate-y-[-100px] transition-all duration-700 fade-in-down"
+				>
 					<h2
 						class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
 					>
@@ -261,354 +273,9 @@
 				</div>
 
 				<div
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xxl:grid-cols-4 gap-8"
-				>
-					<!-- Frontend Skills -->
-					<div class="bg-gray-800 p-8 rounded-lg">
-						<div class="flex items-center mb-6">
-							<div
-								class="w-12 h-12 flex items-center justify-center bg-blue-100 text-primary rounded-lg mr-4"
-							>
-								<i class="ri-layout-4-line ri-xl"></i>
-							</div>
-							<h3 class="text-2xl font-bold text-white">
-								Frontend Development
-							</h3>
-						</div>
-
-						<div class="space-y-6">
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">React.js</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 95%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Next.js</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 90%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">TypeScript</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 70%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Tailwind CSS</span>
-									<span class="text-gray-400">Expect</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 90%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">JavaScript</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 95%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">HTML/CSS</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-primary h-2 rounded-full"
-										style="width: 98%"
-									></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Backend Skills -->
-					<div class="bg-gray-800 p-8 rounded-lg">
-						<div class="flex items-center mb-6">
-							<div
-								class="w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-lg mr-4"
-							>
-								<i class="ri-server-line ri-xl"></i>
-							</div>
-							<h3 class="text-2xl font-bold text-white">Backend Development</h3>
-						</div>
-
-						<div class="space-y-6">
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Node.js</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 80%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Express</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 80%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Python</span>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 70%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">PostgreSQL</span>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 70%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">MongoDB</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 85%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">GraphQL</span>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 65%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">RESTful APIs</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 95%"
-									></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Mobile Skills -->
-					<div class="bg-gray-800 p-8 rounded-lg">
-						<div class="flex items-center mb-6">
-							<div
-								class="w-12 h-12 flex items-center justify-center bg-green-100 text-green-600 rounded-lg mr-4"
-							>
-								<i class="ri-smartphone-line"></i>
-							</div>
-							<h3 class="text-2xl font-bold text-white">Mobile Development</h3>
-						</div>
-
-						<div class="space-y-6">
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">React Native</span>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 80%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Expo</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 90%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Firebase</span>
-									<span class="text-gray-400">Expect</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 85%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium"
-										>Push Notifications</span
-									>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 70%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Native Modules</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-green-500 h-2 rounded-full"
-										style="width: 85%"
-									></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Tools & Others -->
-					<div class="bg-gray-800 p-8 rounded-lg">
-						<div class="flex items-center mb-6">
-							<div
-								class="w-12 h-12 flex items-center justify-center bg-purple-100 text-purple-600 rounded-lg mr-4"
-							>
-								<i class="ri-tools-line ri-xl"></i>
-							</div>
-							<h3 class="text-2xl font-bold text-white">Tools &amp; DevOps</h3>
-						</div>
-
-						<div class="space-y-6">
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Git & GitHub</span>
-									<span class="text-gray-400">Advanced</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-purple-500 h-2 rounded-full"
-										style="width: 90%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Jest/Testing</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-purple-500 h-2 rounded-full"
-										style="width: 85%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">Vercel</span>
-									<span class="text-gray-400">Expert</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-purple-500 h-2 rounded-full"
-										style="width: 90%"
-									></div>
-								</div>
-							</div>
-
-							<div>
-								<div class="flex justify-between mb-1">
-									<span class="text-gray-300 font-medium">CI/CD</span>
-									<span class="text-gray-400">Intermediate</span>
-								</div>
-								<div class="w-full bg-gray-200 rounded-full h-2">
-									<div
-										class="bg-purple-500 h-2 rounded-full"
-										style="width: 80%"
-									></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					id="skillCont"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xxl:grid-cols-4 gap-8 opacity-0 translate-y-[100px] transition-all duration-700 fade-in-up"
+				></div>
 				<!-- Technology Icons -->
 				<!-- <div class="mt-16 bg-white p-8 rounded-lg shadow-md">
 					<h3 class="text-xl font-bold text-gray-900 mb-8 text-center">
@@ -757,7 +424,9 @@
 		<!-- About Me Section -->
 		<section id="about" class="py-16 md:py-24 bg-white">
 			<div class="container mx-auto px-6 section-fade">
-				<div class="text-center mb-16">
+				<div
+					class="text-center mb-16 opacity-0 translate-y-[-100px] transition-all duration-700 fade-in-down"
+				>
 					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 						About Me
 					</h2>
@@ -767,7 +436,9 @@
 				</div>
 
 				<div class="flex flex-col md:flex-row items-center gap-12">
-					<div class="w-full md:w-1/3">
+					<div
+						class="w-full md:w-1/3 opacity-0 translate-x-[-100px] transition-all duration-700 fade-in-left"
+					>
 						<img
 							src="./img/photo.jpg"
 							alt="Kgotso"
@@ -775,7 +446,9 @@
 						/>
 					</div>
 
-					<div class="w-full md:w-2/3">
+					<div
+						class="w-full md:w-2/3 opacity-0 translate-x-[100px] transition-all duration-700 fade-in-right"
+					>
 						<h3 class="text-2xl font-bold text-gray-900 mb-4">
 							Hi, I'm kgotso Masha
 						</h3>
@@ -783,16 +456,16 @@
 							I'm a self-taught full-stack developer with a passion for creating
 							elegant, efficient, and user-friendly web applications. My journey
 							into coding began 5 years ago when I decided to switch careers
-							from a university student, My real education came from
-							building countless projects and solving complex problems.
+							from a university student, My real education came from building
+							countless projects and solving complex problems.
 						</p>
 
 						<p class="text-gray-700 mb-6">
 							What started as a curiosity quickly turned into a passion. I love
 							the problem-solving aspect of development and the satisfaction of
 							building something from scratch that people can use and enjoy. I
-							specialize in React.js, React Native, Next.js, Python and Node.js, but I'm always exploring new
-							technologies and approaches.
+							specialize in React.js, React Native, Next.js, Python and Node.js,
+							but I'm always exploring new technologies and approaches.
 						</p>
 
 						<p class="text-gray-700 mb-8">
@@ -843,7 +516,9 @@
 		<!-- Contact Section -->
 		<section id="contact" class="py-16 md:py-24 bg-gray-50">
 			<div class="container mx-auto px-6 section-fade">
-				<div class="text-center mb-16">
+				<div
+					class="text-center mb-16 opacity-0 translate-y-[-100px] transition-all duration-700 fade-in-down"
+				>
 					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 						Get In Touch
 					</h2>
@@ -854,7 +529,9 @@
 				</div>
 
 				<div class="flex flex-col lg:flex-row gap-12">
-					<div class="w-full lg:w-1/3 order-2 md:order-1">
+					<div
+						class="w-full lg:w-1/3 order-2 md:order-1 opacity-0 translate-x-[-100px] transition-all duration-700 fade-in-left"
+					>
 						<div class="bg-white p-8 rounded-lg shadow-md">
 							<h3 class="text-xl font-bold text-gray-900 mb-6">
 								Contact Information
@@ -921,7 +598,9 @@
 						</div>
 					</div>
 
-					<div class="w-full lg:w-2/3 order-1 md:order-2">
+					<div
+						class="w-full lg:w-2/3 order-1 md:order-2 opacity-0 translate-x-[100px] transition-all duration-700 fade-in-right"
+					>
 						<div class="bg-white p-8 rounded-lg shadow-md">
 							<h3 class="text-xl font-bold text-gray-900 mb-6">
 								Send Me a Message
@@ -1102,13 +781,13 @@
 			const year = new Date().getFullYear();
 			document.getElementById(
 				"all_rights"
-			).innerText = `© ${year} Kgotso Masha. All rights reserved.`;
+			).innerText = `© ${year} Kgotso Masha. All rights reserved. Build with HTML, Javascript and Tailwind CSS`;
 		</script>
 		<script src="js/render-data.js" type="module"></script>
 		<script src="js/index.js"></script>
-		<script src="js/auto-type-animation.js"></script>
 		<script src="js/back-to-top.js"></script>
 		<script src="js/filter-project.js"></script>
 		<script src="js/form.js"></script>
+		<script src="js/animation.js"></script>
 	</body>
 </html>

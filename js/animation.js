@@ -41,4 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	typeText();
+
+	const options = {
+		threshold: 0.2,
+	};
+
+	const observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const el = entry.target;
+				el.classList.remove("opacity-0");
+
+				if (el.classList.contains("fade-in-left")) {
+					el.classList.remove("translate-x-[-100px]");
+				} else if (el.classList.contains("fade-in-right")) {
+					el.classList.remove("translate-x-[100px]");
+				} else if (el.classList.contains("fade-in-down")) {
+					el.classList.remove("translate-y-[-100px]");
+				} else if (el.classList.contains("fade-in-up")) {
+					el.classList.remove("translate-y-[100px]");
+				}
+
+				observer.unobserve(el);
+			}
+		});
+	}, options);
+	document
+		.querySelectorAll(
+			".fade-in-left, .fade-in-right, .fade-in-down, .fade-in-up"
+		)
+		.forEach((el) => {
+			observer.observe(el);
+		});
 });
